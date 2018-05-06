@@ -38,7 +38,7 @@
 						<p class="gras">32 Chemin du Chaillot</p>
 						<p class="gras">17100 SAINTES</p>
 						<p class="gras">site internet: </p>
-						<a id="site_am" href="https://sophro-saintes.fr/">http://sophro-saintes.fr//</a>
+						<a id="site_am" href="http://sophro-saintes.fr/">http://sophro-saintes.fr//</a>
 					</div>
 				</section>
 			</article>
