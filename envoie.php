@@ -1,6 +1,6 @@
 <?php
 if(!empty($_POST['nom']) && !empty($_POST['email']) && !empty($_POST['message'])){
-$mail = 'roland.plantard@yahoo.fr'; // Déclaration de l'adresse de destination.
+$mail = 'roland.plantard@yahoo.fr'; // Dï¿½claration de l'adresse de destination.
 
 if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail)) // On filtre les serveurs qui rencontrent des bogues.
 
@@ -18,7 +18,7 @@ else
 
 }
 
-//=====Déclaration des messages au format texte et au format HTML.
+//=====Dï¿½claration des messages au format texte et au format HTML.
 
 $message_txt = $_POST['message'];
 
@@ -28,7 +28,7 @@ $message_html = "<html><head></head><body>".$_POST['message']."</body></html>";
 
  
 
-//=====Création de la boundary
+//=====Crï¿½ation de la boundary
 
 $boundary = "-----=".md5(rand());
 
@@ -36,7 +36,7 @@ $boundary = "-----=".md5(rand());
 
  
 
-//=====Définition du sujet.
+//=====Dï¿½finition du sujet.
 
 $sujet = "Mail provenant du site";
 
@@ -44,7 +44,7 @@ $sujet = "Mail provenant du site";
 
  
 
-//=====Création du header de l'e-mail.
+//=====Crï¿½ation du header de l'e-mail.
 
 $header = "From: \"".$_POST['nom']."\"<".$_POST['email'].">".$passage_ligne;
 
@@ -59,7 +59,7 @@ $header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$bo
 
  
 
-//=====Création du message.
+//=====Crï¿½ation du message.
 
 $message = $passage_ligne."--".$boundary.$passage_ligne;
 
@@ -97,12 +97,12 @@ $message.= $passage_ligne."--".$boundary."--".$passage_ligne;
 
 mail($mail,$sujet,$message,$header);
 
-header('Location: http://www.depannage-pc-saintes.fr/contact.html');
+header('Location: http://www.depannage-pc-saintes.fr/contact.php');
 
 //==========
 }
 else{
-     echo "<p>Votre email n'a pas été envoyé, veuillez remplir tous les champs</p>";
+     echo "<p>Votre email n'a pas ï¿½tï¿½ envoyï¿½, veuillez remplir tous les champs</p>";
      echo "<a style=\"text-decoration:none; color:black;\" href=\"http://www.depannage-pc-saintes.fr/contact.html\">retour au site</a>";
 }
 
